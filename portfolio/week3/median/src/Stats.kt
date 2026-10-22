@@ -1,6 +1,7 @@
 // Task 7.7.1: statistics functions
 
 fun median (list: List<Float>) : Float {
+    val sorted = list.sorted()
     val len = list.size
     
     if (len < 1.0) {
@@ -9,10 +10,10 @@ fun median (list: List<Float>) : Float {
     
     else if (len % 2 == 1) {
         println(len)
-        return list[len / 2]
+        return sorted[len / 2]
     }
     else {
-        return (list[len / 2] + list[(len / 2) - 1]) / 2
+        return (sorted[len / 2] + sorted[(len / 2) - 1]) / 2
     }
 }
 
